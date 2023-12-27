@@ -1,4 +1,4 @@
-name: Cmdtial-Folia
+name: Cmdtial
 version: '${project.version}'
 main: org.chronoplugins.cmdtial.Cmdtial
 api-version: '1.17'
@@ -73,4 +73,10 @@ permissions:
     default: op
   cmdtial.time:
     description: Allows you to use the time command.
+    default: op
+  cmdtial.modes:
+    description: Allows you to use the modes command.
+    default: op
+  cmdtial.teleportation:
+    description: Allows you to use the teleportation commands.
     default: op

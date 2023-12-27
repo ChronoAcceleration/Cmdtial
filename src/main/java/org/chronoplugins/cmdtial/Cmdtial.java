@@ -1,5 +1,6 @@
 package org.chronoplugins.cmdtial;
 
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Server;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -36,6 +37,14 @@ public final class Cmdtial extends JavaPlugin {
         // Load Tab Completors
 
         getCommand("time").setTabCompleter(new timeTabCompletor());
+
+        // Load Metrics
+
+        try {
+            Metrics metrics = new Metrics(this, 20566);
+        } catch (Exception e) {
+            logger.warning("Failed to load metrics. :(");
+        }
 
         // Finalize
 
