@@ -20,7 +20,7 @@ public class creative implements CommandExecutor {
         Player player = (Player) sender;
 
         if (!Permissions.hasPermission("gmc", player)) {
-            StringConstructor.commandMessage(player, "You do not have permission to use this command!", true);
+            StringConstructor.commandMessage(player, "You do not have permission to use this command!");
             return true;
         }
 
@@ -30,7 +30,7 @@ public class creative implements CommandExecutor {
             Player target = player.getServer().getPlayer(args[0]);
 
             if (target == null) {
-                StringConstructor.commandMessage(player, "Player not found!", true);
+                StringConstructor.commandMessage(player, "Player not found!");
                 return true;
             }
 
@@ -43,6 +43,6 @@ public class creative implements CommandExecutor {
     private void setCreativeMode(Player sender, Player target) {
         target.setGameMode(GameMode.CREATIVE);
         String message = (sender.equals(target)) ? "Successfully set your gamemode!" : "Set " + target.getName() + "'s gamemode!";
-        StringConstructor.commandMessage(sender, message, true);
+        StringConstructor.commandMessage(sender, message);
     }
 }

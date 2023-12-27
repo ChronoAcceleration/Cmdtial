@@ -21,12 +21,12 @@ public class to implements CommandExecutor {
         Player player = (Player) sender;
 
         if (!Permissions.hasPermission("to", player)) {
-            StringConstructor.commandMessage(player, "You do not have permission to use this command!", true);
+            StringConstructor.commandMessage(player, "You do not have permission to use this command!");
             return true;
         }
 
         if (args.length == 0) {
-            StringConstructor.commandMessage(player, "You need a player to teleport to!", true);
+            StringConstructor.commandMessage(player, "You need a player to teleport to!");
             return true;
         }
 
@@ -34,7 +34,7 @@ public class to implements CommandExecutor {
         Player target = player.getServer().getPlayer(playerName);
 
         if (target == null) {
-            StringConstructor.commandMessage(player, "Player not found!", true);
+            StringConstructor.commandMessage(player, "Player not found!");
             return true;
         }
 

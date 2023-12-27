@@ -21,12 +21,12 @@ public class returnplr implements CommandExecutor {
         Player player = (Player) sender;
 
         if (!Permissions.hasPermission("return", player)) {
-            StringConstructor.commandMessage(player, "You do not have permission to use this command!", true);
+            StringConstructor.commandMessage(player, "You do not have permission to use this command!");
             return true;
         }
 
         if (args.length == 0) {
-            StringConstructor.commandMessage(player, "You need a player to return!", true);
+            StringConstructor.commandMessage(player, "You need a player to return!");
             return true;
         }
 
@@ -34,20 +34,20 @@ public class returnplr implements CommandExecutor {
         Player target = player.getServer().getPlayer(playerName);
 
         if (target == null) {
-            StringConstructor.commandMessage(player, "Player not found!", true);
+            StringConstructor.commandMessage(player, "Player not found!");
             return true;
         }
 
         String playerData = TeleportationData.getPlayerData(player.getUniqueId());
 
         if (playerData == null) {
-            StringConstructor.commandMessage(player, "You need to teleport someone first!", true);
+            StringConstructor.commandMessage(player, "You need to teleport someone first!");
             return true;
         }
 
         target.teleportAsync(StringConstructor.stringToLocation(playerData));
         target.playSound(target.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1f, 0.9f);
-        StringConstructor.commandMessage(player, "Returned " + target.getName(), true);
+        StringConstructor.commandMessage(player, "Returned " + target.getName());
 
         return true;
     }

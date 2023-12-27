@@ -21,19 +21,19 @@ public class bring implements CommandExecutor {
         Player player = (Player) sender;
 
         if (!Permissions.hasPermission("bring", player)) {
-            StringConstructor.commandMessage(player, "You do not have permission to use this command!", true);
+            StringConstructor.commandMessage(player, "You do not have permission to use this command!");
             return true;
         }
 
         if (args.length == 0) {
-            StringConstructor.commandMessage(player, "You need a player to bring!", true);
+            StringConstructor.commandMessage(player, "You need a player to bring!");
             return true;
         }
 
         Player target = player.getServer().getPlayer(args[0]);
 
         if (target == null) {
-            StringConstructor.commandMessage(player, "Player not found!", true);
+            StringConstructor.commandMessage(player, "Player not found!");
             return true;
         }
 

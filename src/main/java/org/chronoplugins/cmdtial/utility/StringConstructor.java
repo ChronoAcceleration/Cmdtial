@@ -11,10 +11,7 @@ public class StringConstructor {
         return prefix + message;
     }
 
-    public static void commandMessage(Player player, String message, Boolean includeSound) {
-        if (includeSound) {
-            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HARP, 1, 1);
-        }
+    public static void commandMessage(Player player, String message) {
         player.sendMessage(prefix + message);
     }
 

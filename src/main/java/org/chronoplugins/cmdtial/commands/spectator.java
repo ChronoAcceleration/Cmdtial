@@ -20,7 +20,7 @@ public class spectator implements CommandExecutor {
         Player player = (Player) sender;
 
         if (!Permissions.hasPermission("gmsp", player)) {
-            StringConstructor.commandMessage(player, "You do not have permission to use this command!", true);
+            StringConstructor.commandMessage(player, "You do not have permission to use this command!");
             return true;
         }
 
@@ -30,7 +30,7 @@ public class spectator implements CommandExecutor {
             Player target = player.getServer().getPlayer(args[0]);
 
             if (target == null) {
-                StringConstructor.commandMessage(player, "Player not found!", true);
+                StringConstructor.commandMessage(player, "Player not found!");
                 return true;
             }
 
@@ -43,6 +43,6 @@ public class spectator implements CommandExecutor {
     private void setSpectatorMode(Player sender, Player target) {
         target.setGameMode(GameMode.SPECTATOR);
         String message = (sender.equals(target)) ? "Successfully set your gamemode!" : "Set " + target.getName() + "'s gamemode!";
-        StringConstructor.commandMessage(sender, message, true);
+        StringConstructor.commandMessage(sender, message);
     }
 }

@@ -20,7 +20,7 @@ public class survival implements CommandExecutor {
         Player player = (Player) sender;
 
         if (!Permissions.hasPermission("gms", player)) {
-            StringConstructor.commandMessage(player, "You do not have permission to use this command!", true);
+            StringConstructor.commandMessage(player, "You do not have permission to use this command!");
             return true;
         }
 
@@ -30,12 +30,12 @@ public class survival implements CommandExecutor {
             Player target = player.getServer().getPlayer(args[0]);
 
             if (target == null) {
-                StringConstructor.commandMessage(player, "Player not found!", true);
+                StringConstructor.commandMessage(player, "Player not found!");
                 return true;
             }
 
             setGameMode(target, GameMode.SURVIVAL);
-            StringConstructor.commandMessage(player, "Set " + target.getName() + "'s gamemode!", true);
+            StringConstructor.commandMessage(player, "Set " + target.getName() + "'s gamemode!");
         }
 
         return true;
@@ -44,6 +44,6 @@ public class survival implements CommandExecutor {
     private void setGameMode(Player player, GameMode gameMode) {
         player.setGameMode(gameMode);
         String message = (player.equals(player)) ? "Successfully set your gamemode!" : "Set " + player.getName() + "'s gamemode!";
-        StringConstructor.commandMessage(player, message, true);
+        StringConstructor.commandMessage(player, message);
     }
 }

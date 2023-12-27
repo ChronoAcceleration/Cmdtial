@@ -18,12 +18,12 @@ public class back implements CommandExecutor {
 
         final boolean permissionCheck = Permissions.hasPermission("back", player);
         if (!permissionCheck) {
-            StringConstructor.commandMessage(player, "You do not have permission to use this command!", true);
+            StringConstructor.commandMessage(player, "You do not have permission to use this command!");
             return true;
         }
 
         if (teleportPos == null) {
-            StringConstructor.commandMessage(player, "You don't have a original position to teleport to!", true);
+            StringConstructor.commandMessage(player, "You don't have a original position to teleport to!");
             return true;
         }
 

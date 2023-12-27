@@ -15,12 +15,12 @@ public class time implements CommandExecutor {
         final boolean permissionCheck = Permissions.hasPermission("time", player);
 
         if (!permissionCheck) {
-            StringConstructor.commandMessage(player, "You do not have permission to use this command!", true);
+            StringConstructor.commandMessage(player, "You do not have permission to use this command!");
             return true;
         }
 
         if (args.length == 0) {
-            StringConstructor.commandMessage(player, "You need to specify a time!", true);
+            StringConstructor.commandMessage(player, "You need to specify a time!");
             return true;
         }
 
@@ -29,9 +29,9 @@ public class time implements CommandExecutor {
         if (time.equalsIgnoreCase("day") || time.equalsIgnoreCase("night")) {
             long timeValue = time.equalsIgnoreCase("day") ? 0 : 13000; // 0 for day, 13000 for night
             player.getWorld().setTime(timeValue);
-            StringConstructor.commandMessage(player, "Successfully set the time!", true);
+            StringConstructor.commandMessage(player, "Successfully set the time!");
         } else {
-            StringConstructor.commandMessage(player, "You need to specify a valid time (day/night)!", true);
+            StringConstructor.commandMessage(player, "You need to specify a valid time (day/night)!");
         }
 
         return true;
