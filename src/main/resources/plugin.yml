@@ -1,4 +1,76 @@
-name: Cmdtial
+name: Cmdtial-Folia
 version: '${project.version}'
 main: org.chronoplugins.cmdtial.Cmdtial
 api-version: '1.17'
+description: Fastly executed commands.
+folia-supported: true
+
+commands:
+  gmc:
+    description: Changes a players gamemode to creative.
+    usage: /<command> <player>-Optional
+    permission: cmdtial.gmc
+    permission-message: You don't have permission to use this command.
+    aliases: [creative]
+  gms:
+    description: Changes a players gamemode to survival.
+    usage: /<command> <player>-Optional
+    permission: cmdtial.gms
+    permission-message: You don't have permission to use this command.
+    aliases: [survival]
+  gmsp:
+    description: Changes a players gamemode to spectator.
+    usage: /<command> <player>-Optional
+    permission: cmdtial.gmsp
+    permission-message: You don't have permission to use this command.
+    aliases: [spectator]
+  to:
+    description: Teleports you to another player.
+    usage: /<command> <player>
+    permission: cmdtial.to
+    permission-message: You don't have permission to use this command.
+  back:
+    description: Teleports you back to your last location.
+    usage: /<command>
+    permission: cmdtial.back
+    permission-message: You don't have permission to use this command.
+  bring:
+    description: Brings a player to you.
+    usage: /<command> <player>
+    permission: cmdtial.bring
+    permission-message: You don't have permission to use this command.
+  return:
+    description: Brings a player back.
+    usage: /<command> <player>
+    permission: cmdtial.return
+    permission-message: You don't have permission to use this command.
+  time:
+    description: Changes the time of day.
+    usage: /<command> <type>
+    permission: cmdtial.time
+    permission-message: You don't have permission to use this command.
+permissions:
+  cmdtial.gmc:
+    description: Allows you to use the gmc command.
+    default: op
+  cmdtial.gms:
+    description: Allows you to use the gms command.
+    default: op
+  cmdtial.gmsp:
+    description: Allows you to use the gmsp command.
+    default: op
+  cmdtial.to:
+    description: Allows you to use the to command.
+    default: op
+  cmdtial.back:
+    description: Allows you to use the back command.
+    default: op
+  cmdtial.bring:
+    description: Allows you to use the bring command.
+    default: op
+  cmdtial.return:
+    description: Allows you to use the return command.
+    default: op
+  cmdtial.time:
+    description: Allows you to use the time command.
+    default: op
