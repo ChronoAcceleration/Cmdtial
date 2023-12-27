@@ -38,7 +38,7 @@ public class bring implements CommandExecutor {
         }
 
         TeleportationData.setData(player.getUniqueId(), StringConstructor.locationToString(target.getLocation()), "player");
-        target.teleport(player);
+        target.teleportAsync(player.getLocation());
         target.playSound(target.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1f, 0.9f);
 
         return true;

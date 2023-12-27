@@ -27,7 +27,7 @@ public class back implements CommandExecutor {
             return true;
         }
 
-        player.teleport(StringConstructor.stringToLocation(teleportPos));
+        player.teleportAsync(StringConstructor.stringToLocation(teleportPos));
         player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1f, 0.9f);
 
         return true;

@@ -47,4 +47,8 @@ public final class Cmdtial extends JavaPlugin {
     public void onDisable() {
         logger.info(StringConstructor.constructConsoleMessage("Goodbye, world!"));
     }
+
+    public static Cmdtial getInstance() {
+        return getPlugin(Cmdtial.class);
+    }
 }

@@ -45,7 +45,7 @@ public class returnplr implements CommandExecutor {
             return true;
         }
 
-        target.teleport(StringConstructor.stringToLocation(playerData));
+        target.teleportAsync(StringConstructor.stringToLocation(playerData));
         target.playSound(target.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1f, 0.9f);
         StringConstructor.commandMessage(player, "Returned " + target.getName(), true);
 

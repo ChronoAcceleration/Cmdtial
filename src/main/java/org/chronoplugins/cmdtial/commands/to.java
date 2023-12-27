@@ -39,7 +39,7 @@ public class to implements CommandExecutor {
         }
 
         TeleportationData.setData(player.getUniqueId(), StringConstructor.locationToString(player.getLocation()), "self");
-        player.teleport(target);
+        player.teleportAsync(target.getLocation());
         player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1f, 0.9f);
 
         return true;
