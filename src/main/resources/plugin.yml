@@ -1,0 +1,4 @@
+name: Cmdtial
+version: '${project.version}'
+main: org.chronoplugins.cmdtial.Cmdtial
+api-version: '1.17'
